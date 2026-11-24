@@ -6523,7 +6523,7 @@ document.addEventListener('DOMContentLoaded',()=>{try{ragRender()}catch(e){conso
    for(let i=0;i<extracted.length;i++){
      const x=extracted[i],fullText=String(x.text||'');
      if(!fullText.trim()){continue}
-     const chunks=dcSplitText(fullText,24000);
+     const chunks=dcSplitText(fullText,8000);
      try{
        // یک هش ثابت برای کل سند؛ تمام بخش‌ها با همین شناسه منطقی ارسال می‌شوند.
        const sourceHash=await sha256(fullText);
